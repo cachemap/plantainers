@@ -1,4 +1,4 @@
-i# Ensure bash is installed
+# Ensure Python3+ is installed (TODO: Check functionality works)
 if [ python3 -v python3 &>/dev/null ] then
     echo "Python 3 is installed"
 else
