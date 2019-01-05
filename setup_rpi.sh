@@ -6,6 +6,10 @@
 #sudo apt-get update
 #sudo apt-get dist-upgrade # Upgrade all installed packages to their latest versions
 
+##
+# Create .vimrc to configure vi/vim
+##
+#vi -c "0 s/^/set nocompatible/" -c "wq" ~/.vimrc
 
 ##
 # Install useful system packages
