@@ -10,7 +10,17 @@
 # Create .vimrc to configure vi and make git use vi
 ##
 #vi -c "0 s/^/set nocompatible/" -c "wq" ~/.vimrc
-# git config --global core.editor editor_name
+
+##
+# Configure git
+##
+
+# TODO: make this work so pushes don't require authentication
+# git config --global core.editor vi
+# sudo apt-get install libgnome-keyring-dev
+# cd /usr/share/doc/git/contrib/credential/gnome-keyring
+# sudo make
+# git config --global credential.helper /usr/share/doc/git/contrib/credential/gnome-keyring
 
 ##
 # Install useful system packages
