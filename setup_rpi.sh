@@ -7,9 +7,10 @@
 #sudo apt-get dist-upgrade # Upgrade all installed packages to their latest versions
 
 ##
-# Create .vimrc to configure vi/vim
+# Create .vimrc to configure vi and make git use vi
 ##
 #vi -c "0 s/^/set nocompatible/" -c "wq" ~/.vimrc
+# git config --global core.editor editor_name
 
 ##
 # Install useful system packages

@@ -1,0 +1,14 @@
+{
+  "name": "piclient",
+  "version": "1.0.0",
+  "description": "Plantainer's R-Pi node instance",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dillon Notz",
+  "license": "ISC",
+  "dependencies": {
+    "rpio": "^1.0.11"
+  }
+}
