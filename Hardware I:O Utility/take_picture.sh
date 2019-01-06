@@ -10,3 +10,4 @@ DATE=$(date +"%Y-%m-%d_%H%M")
 
 # Take photo
 raspistill -vf -hf -o /home/pi/temp_photos/$DATE.jpg
+
