@@ -1,6 +1,7 @@
 const express = require('express')
 const MongoClient = require('mongodb').MongoClient
 const assert = require('assert')
+const root = require('./graphql/schema') // TODO: Fix this
 
 const db_url = 'mongodb://localhost:27017'
 const dbName = 'myproject'
