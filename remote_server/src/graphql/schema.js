@@ -10,28 +10,35 @@ const {
 	GraphQLSchema
 } = require('graphql')
 
-// Today's Weather
-// const weatherToday = new GraphQLObjectType({
-// 	name: 'weatherToday',
-// 	fields: () => ({
-// 		date_local:    { type: GraphQLInt },
-// 		city_name:     { type: GraphQLInt },
-// 		temperature:   { type: GraphQLInt },
-// 		precipitation: { type: GraphQLInt }
-// 	})
-// })
+schema {
+	query: Query
+}
 
-const weatherOfDate = new GraphQLObjectType({
-	name: 'weatherOfDate',
+const Query = new GraphQLSchema {
+	country {
+		names {
+			en
+		}
+		geoname_id
+		iso_code
+	}
+	location {
+		latitude
+		longitude
+	}
+}
+
+// Geolocation data
+const weatherToday = new GraphQLObjectType({
+	name: 'weatherToday',
 	fields: () => ({
+		date_local:    { type: GraphQLInt },
 		city_name:     { type: GraphQLInt },
 		temperature:   { type: GraphQLInt },
 		precipitation: { type: GraphQLInt }
 	})
 })
 
-// TODO: Add this route?
-//const weatherOfWeek = 
 
 
 // Root Query
@@ -42,7 +49,7 @@ const RootQuery = new GraphQLObjectType({
 			type: new GraphQLList(weatherOfDate),
 			resolve(parent, args) {
 				return axios
-					.get('api.openweathermap.org/data/2.5/weather?q=Atlanta')
+					.get('api.openweathermap.org/data/2.5/weather?q=Atlanta') // link is broken
 					.then(res => res.data)
 			}
 		}

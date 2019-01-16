@@ -19,6 +19,20 @@ client.connect(function(err) {
 const port = process.env.port || 8080
 const app  = express()
 
+/**
+ *  This is for easy reference in the GraphQL route setup on
+ */
+
+// graphqlHTTP({
+// 	schema: GraphQLSchema,
+// 	graphiql?: ?boolean,
+// 	rootValue?: ?any,
+// 	context?: ?any,
+// 	pretty?: ?boolean,
+// 	formatError?: ?Function,
+// 	validationRules?: ?Array<any>,
+// })
+
 app.use(
 	'/graphql',
 	graphqlHTTP({
